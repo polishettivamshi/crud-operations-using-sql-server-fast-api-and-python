@@ -3,9 +3,9 @@ from pydantic import BaseModel
 import pyodbc
 
 conn = pyodbc.connect(driver='{ODBC Driver 17 for SQL Server}',
-                      server='3.87.50.246',
-                      database='CStoreiQDB_dev',
-                      uid='DBUser', pwd='CStore@db123')
+                      server='enter ip_number',
+                      database='enter database_name',
+                      uid='enter user_name', pwd='enter password')
 
 app = FastAPI()
 
