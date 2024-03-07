@@ -14,7 +14,7 @@ class Item(BaseModel):
     name: str
     description: str = None
     SellingPrice: float
-    
+    #THIS IS GET METHOD
 @app.get('/api/get/items/')
 def read_items():
     try:
@@ -26,7 +26,7 @@ def read_items():
             return {'items': items}
     except pyodbc.Error as e:
         raise HTTPException(status_code=500, detail=str(e))
-
+#THIS POST METHOD 
 @app.post('/api/post/items/')
 def create_item(item: Item):
     try:
@@ -37,7 +37,7 @@ def create_item(item: Item):
         return {'message': 'Item created successfully'}
     except pyodbc.Error as e:
         raise HTTPException(status_code=500, detail=str(e))
-
+#THIS IS GET METHOD
 @app.get('/api/Getitemsbyid/{item_id}')
 def read_item(item_id: int):
     try:
