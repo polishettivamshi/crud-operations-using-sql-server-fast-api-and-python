@@ -61,7 +61,7 @@ def update_item(item_id: int, item: Item):
         return {'message': 'Item updated successfully'}
     except pyodbc.Error as e:
         raise HTTPException(status_code=500, detail=str(e))
-
+#THIS IS DELETE METHOD
 @app.delete('/api/delete/items/{item_id}')
 def delete_item(item_id: int):
     try:
